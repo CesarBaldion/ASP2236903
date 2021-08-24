@@ -1,0 +1,34 @@
+﻿@model ASP2236903.Models.usuariorol
+
+@{
+    ViewBag.Title = "Detalles de Rol de Usuario";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Rol de Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Usuario:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuario)
+        </dd>
+
+        <dt>
+            Rol:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idRol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Ver Todos", "Index")
+</p>
