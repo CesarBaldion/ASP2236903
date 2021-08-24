@@ -1,0 +1,42 @@
+﻿@model ASP2236903.Models.producto_compra
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>producto_compra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Id Compra:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_compra)
+        </dd>
+
+        <dt>
+            Id Producto:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_producto)
+        </dd>
+
+        <dt>
+            Cantidad:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Ver Todos", "Index")
+</p>

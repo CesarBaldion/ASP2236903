@@ -51,6 +51,13 @@ namespace ASP2236903.Controllers
             }
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(compra compra)
         {
             if (!ModelState.IsValid)
