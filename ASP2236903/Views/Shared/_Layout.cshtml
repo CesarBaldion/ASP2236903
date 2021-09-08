@@ -39,6 +39,10 @@
                             <li>@Html.ActionLink("Producto Compra", "Index", "Productocompra")</li>
                         </ul>
                     </li>
+                    @if (User.Identity.IsAuthenticated)
+                        {
+                <li>@Html.ActionLink("Cerrar Sesión", "CloseSession", "Usuario")</li>
+                        }
                 </ul>
             </div>
         </div>

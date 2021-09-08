@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2" for="id_producto">id Producto:</label>
+            <label class="control-label col-md-2" for="id_producto">Producto:</label>
             <div class="col-md-10">
                 @Html.Action("ListarProductos")
                 @Html.ValidationMessageFor(model => model.id_producto, "", new { @class = "text-danger" })
