@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ASP2236903.Models;
+using Rotativa;
 
 namespace ASP2236903.Controllers
 {
+    [Authorize]
     public class ClienteController : Controller
     {
         // GET: Cliente
@@ -115,6 +117,33 @@ namespace ASP2236903.Controllers
                 ModelState.AddModelError("", "error " + ex);
                 return View();
             }
+        }
+        public ActionResult Reporte()
+        {
+            try
+            {
+                var db = new inventario2021Entities();
+                var query = from tabCliente in db.cliente
+                            join tabCompra in db.compra on tabCliente.id equals tabCompra.id_cliente
+                            select new Reporte
+                            {
+                                nombreCliente = tabCliente.nombre,
+                                DocumentoCliente = tabCliente.documento,
+                                EmailCliente = tabCliente.email,
+                                fechaCompra = tabCompra.fecha,
+                                totalCompra = tabCompra.total,
+                            };
+                return View(query);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "error " + ex);
+                return View();
+            }
+        }
+        public ActionResult PdfReporte()
+        {
+            return new ActionAsPdf("Reporte") { FileName = "reporte.pdf" };
         }
     }
 }

@@ -164,7 +164,7 @@ namespace ASP2236903.Controllers
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ModelState.AddModelError("", "error " + ex);
                 return View();

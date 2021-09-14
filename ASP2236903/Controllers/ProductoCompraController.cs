@@ -7,6 +7,7 @@ using ASP2236903.Models;
 
 namespace ASP2236903.Controllers
 {
+    [Authorize]
     public class ProductoCompraController : Controller
     {
             // GET: Producto

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace ASP2236903.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
