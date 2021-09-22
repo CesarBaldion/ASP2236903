@@ -142,6 +142,7 @@
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\UsuarioRolController.cs" />
+    <Compile Include="Filtros\AuthorizeUser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -296,6 +297,7 @@
     <Content Include="Views\Cliente\uploadCSV.cshtml" />
     <Content Include="Views\Shared\Paginador.cshtml" />
     <Content Include="Views\Usuario\PaginadorIndex.cshtml" />
+    <Content Include="Views\Producto\cargarImagen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
